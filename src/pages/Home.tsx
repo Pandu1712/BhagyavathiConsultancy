@@ -1,5 +1,5 @@
-import React from "react";
-import { motion, useAnimation, easeInOut } from "framer-motion";
+
+import { motion, easeInOut } from "framer-motion";
 import poster from "../assets/Poster.jpg";
 import Grid from "../components/Grid";
 

@@ -1,5 +1,5 @@
 // src/App.jsx
-import React from 'react';
+
 import Navbar from './components/Header';
 import AppRoutes from './routes/AppRoutes';
 import Footer from './components/Footer';

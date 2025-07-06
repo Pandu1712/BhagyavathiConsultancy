@@ -1,4 +1,4 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import { FaRegCheckCircle, FaStar, FaCogs } from "react-icons/fa";
 import img1 from "../assets/Poster.jpg";
