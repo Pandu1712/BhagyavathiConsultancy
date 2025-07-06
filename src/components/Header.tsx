@@ -5,7 +5,7 @@ import logo from '../assets/logo1.jpg';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
- 
+
   const location = useLocation(); // ✅ Get current path
 
   const navLinks = [
@@ -32,11 +32,10 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.href}
-              className={`text-white text-sm px-4 py-1.5 rounded-full font-medium ${
-                location.pathname === link.href
+              className={`text-white text-sm px-4 py-1.5 rounded-full font-medium ${location.pathname === link.href
                   ? 'bg-[#9FBFC5] text-[#0D4D66]'
                   : 'hover:bg-[#9FBFC5]/80 hover:text-[#0D4D66]'
-              }`}
+                }`}
             >
               {link.name}
             </Link>
@@ -57,7 +56,6 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-
       {menuOpen && (
         <div className="md:hidden bg-[#0D4D66] px-6 pt-4 pb-6 space-y-3">
           {navLinks.map((link) => (
@@ -65,17 +63,27 @@ const Navbar = () => {
               key={link.name}
               to={link.href}
               onClick={() => setMenuOpen(false)}
-              className={`block text-white text-sm px-4 py-2 rounded-full font-medium ${
-                location.pathname === link.href
+              className={`block text-white text-sm px-4 py-2 rounded-full font-medium ${location.pathname === link.href
                   ? 'bg-[#9FBFC5] text-[#0D4D66]'
                   : 'hover:bg-[#9FBFC5]/80 hover:text-[#0D4D66]'
-              }`}
+                }`}
             >
               {link.name}
             </Link>
           ))}
+          <a
+            href="https://wa.me/916303130025"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-green-500 text-white text-sm px-4 py-2 rounded-full font-medium text-center hover:bg-green-600"
+          >
+            <div className="flex items-center justify-center gap-2">
+              <FaWhatsapp /> WhatsApp
+            </div>
+          </a>
         </div>
       )}
+
     </header>
   );
 };
