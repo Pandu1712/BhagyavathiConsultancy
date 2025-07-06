@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaWhatsapp, FaUserCircle } from 'react-icons/fa';
+import { FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa';
 import logo from '../assets/logo1.jpg';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isLoggedIn] = useState(false);
+ 
   const location = useLocation(); // ✅ Get current path
 
   const navLinks = [
